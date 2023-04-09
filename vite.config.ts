@@ -37,5 +37,12 @@ export default defineConfig({
   },
   server: {
     port: 3010,
+    proxy: {
+      '^/api': {
+        target: 'https://mfacilitate-api.deno.dev',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
   },
 })
