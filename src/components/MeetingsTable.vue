@@ -8,7 +8,13 @@
               <span>Title</span>
             </th>
             <th class="text-left">
+              <span>start_at</span>
+            </th>
+            <th class="text-left">
               <span>created_at</span>
+            </th>
+            <th class="text-left">
+              <span>Id</span>
             </th>
           </tr>
         </thead>
@@ -18,7 +24,9 @@
             :key="item.meeting_id"
           >
             <td>{{ item.title }}</td>
+            <td>{{ item.start_at }}</td>
             <td>{{ item.created_at }}</td>
+            <td>{{ item.meeting_id }}</td>
           </tr>
         </tbody>
       </v-table>
